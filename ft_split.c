@@ -6,7 +6,7 @@
 /*   By: wjonatho <wjonatho@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 13:22:32 by wjonatho          #+#    #+#             */
-/*   Updated: 2021/09/05 13:22:32 by wjonatho         ###   ########.fr       */
+/*   Updated: 2021/10/30 13:05:54 by wjonatho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static size_t	elem_size(char const *s, char c)
 	return (len);
 }
 
-static void	*leek_case(size_t num_segment, char **arr)
+void	*leak_case(size_t num_segment, char **arr)
 {
 	size_t	i;
 
@@ -74,7 +74,7 @@ static char	**arr_fill(char const *s, char c, size_t num_segment, char **arr)
 		len = elem_size(s, c);
 		arr[i] = malloc((len + 1) * sizeof(char));
 		if (arr[i] == NULL)
-			return (leek_case(num_segment, arr));
+			return (leak_case(num_segment, arr));
 		j = 0;
 		while (j < len)
 			arr[i][j++] = *s++;
