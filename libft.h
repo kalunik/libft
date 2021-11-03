@@ -51,5 +51,6 @@ void	*leak_case(size_t num_segment, char **arr);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	wr(void);
 
 #endif
